@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --blue-light: hsl(225, 100%, 98%);
+  --blue-pale: hsl(225, 100%, 94%);
+  --blue-bright: hsl(245, 75%, 52%);
+  --blue-desaturated: hsl(224, 23%, 55%);
+  --blue-dark: hsl(223, 47%, 23%);
+  --blue-attribution: hsl(228, 45%, 44%);
+  --hover: #766bf1;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-size: cover;
+  background-color: var(--blue-pale);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1.5em;
+  text-align: center;
+  max-width: 21em;
+}
+
+.card__image {
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  width: 100%;
+}
+
+.card__title {
+  margin-top: 1em;
+}
+.card__text {
+  padding: 1em 2em;
+}
+.card__price {
+  align-items: center;
+  background-color: #f8f9fe;
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+  padding: 1em;
+}
+
+.card__price-change:hover {
+  color: var(--hover);
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 1em;
+  font-weight: bold;
+  padding: 1em;
+  width: 90%;
+}
+.btn__proceed {
+  background-color: var(--blue-bright);
+  border: var(--blue-bright);
+  box-shadow: 0 2em 5em var(--blue-pale);
+  color: white;
+}
+
+.btn__proceed:hover {
+  background-color: var(--hover);
+}
+
+.btn__cancel {
+  background-color: transparent;
+  border: none;
+  color: black;
+  margin-bottom: 1em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--blue-attribution);
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
